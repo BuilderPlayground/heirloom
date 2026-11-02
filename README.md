@@ -4,6 +4,16 @@ Heirloom™ is a personal affairs dashboard exploring how individuals can organi
 
 This repository contains a limited technical demonstration developed for the Resilient Coders Fall 2026 fellowship.
 
+## Live Demo
+
+[Explore the Heirloom Dashboard](https://heirloom-tyup.onrender.com)
+
+The publicly hosted demonstration operates in read-only mode.
+
+## Dashboard Preview
+
+![Heirloom Dashboard](public/images/dashboard.png)
+
 ## Features
 
 - Responsive personal affairs dashboard
