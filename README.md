@@ -1,12 +1,16 @@
 # Heirloom™
 
-Heirloom™ is a personal affairs dashboard exploring how individuals can organize important assets, relationships, records, and continuity considerations.
+**Build with intention. Protect what matters. Carry it forward.**
 
-This repository contains a limited technical demonstration developed for the Resilient Coders Fall 2026 fellowship.
+People spend their lives building assets, businesses, intellectual property, relationships, and knowledge that deserve protection.
+
+Heirloom™ is designed to make the infrastructure behind that legacy visible—what you own, what's exposed, who needs to know, and what must be in place for what you've built to endure.
+
+Rather than treating legacy as synonymous with inheritance, Heirloom approaches it as an ongoing practice of ownership, stewardship, preparedness, and continuity.
 
 ## Live Demo
 
-[Explore the Heirloom Dashboard](https://heirloom-tyup.onrender.com)
+[Explore Heirloom™](https://heirloom-tyup.onrender.com)
 
 The publicly hosted demonstration operates in read-only mode.
 
@@ -14,36 +18,81 @@ The publicly hosted demonstration operates in read-only mode.
 
 ![Heirloom Dashboard](public/images/dashboard.png)
 
-## Features
+## Current Features
 
-- Responsive personal affairs dashboard
-- Asset management with create, read, update, and delete functionality
-- MongoDB-backed asset records
-- Asset categorization and continuity status tracking
-- Illustrative legacy readiness overview
-- Read-only mode for public demonstrations
+- **Personal Affairs Dashboard:** A responsive workspace featuring an illustrative Legacy Readiness overview, key indicators, and priority actions.
+- **Asset Management:** A centralized register for financial, property, business, intellectual property, digital, creative, and other holdings.
+- **Persistent Records:** Create, view, update, and delete asset records using MongoDB.
+- **Ownership & Continuity Tracking:** Record asset categories, ownership status, beneficiary status, and continuity considerations.
+- **REST API:** Express-based endpoints supporting asset creation, retrieval, updates, and deletion.
+- **Read-Only Public Access:** A publicly accessible demonstration that restricts modifications to asset records.
 
-## Tech Stack
+## Technical Stack
 
-HTML, CSS, JavaScript, Node.js, Express, EJS, MongoDB, and Mongoose.
+- **Frontend:** HTML5, CSS3, JavaScript, EJS
+- **Backend:** Node.js, Express
+- **Database:** MongoDB Atlas, Mongoose
+- **Deployment:** Render
+- **Version Control:** Git, GitHub
 
 ## Running Locally
 
-1. Install dependencies: `npm install`
-2. Create a `.env` file containing your `MONGODB_URI`.
-3. Start the server: `node server.js`
-4. Open `http://localhost:8082`.
+1. Clone the repository:
 
-For read-only mode, run:
+   ```bash
+   git clone https://github.com/BuilderPlayground/heirloom.git
+   ```
 
-`DEMO_READ_ONLY=true node server.js`
+2. Navigate to the project directory:
 
-## Project Scope & Ownership
+   ```bash
+   cd heirloom
+   ```
 
-Heirloom™ is an intentionally limited demonstration adapted from an independently conceived project that predates this fellowship. This public implementation does not represent or disclose the full scope of the founder's private work, product strategy, or future development plans.
+3. Install dependencies:
 
-This repository is not offered under an open-source license.
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env` file containing your MongoDB connection string:
+
+   ```env
+   MONGODB_URI=your_mongodb_connection_string
+   ```
+
+5. Start the application:
+
+   ```bash
+   node server.js
+   ```
+
+6. Visit `http://localhost:8082`.
+
+To run the application in read-only mode:
+
+```bash
+DEMO_READ_ONLY=true node server.js
+```
+
+## Development Status
+
+Heirloom™ is an evolving product, with this repository representing an intentionally scoped public implementation.
+
+The current version establishes the foundational dashboard experience, database-backed asset management, and API functionality.
+
+Some dashboard indicators, including the Legacy Readiness score and priority-action summaries, are illustrative rather than dynamically calculated.
+
+The publicly hosted application uses fictional examples and does not provide authenticated personal data storage.
+
+## Project Scope & Intellectual Property
+
+This repository represents a limited public implementation and does not disclose the full scope of the underlying work, proprietary product strategy, or future development plans.
+
+No open-source license has been granted for this repository.
 
 ## Disclaimer
 
-Heirloom™ is an early-stage demonstration using fictional data. Illustrative readiness figures are not legal or financial assessments. The application is not intended for storing sensitive personal or financial information.
+Heirloom™ is not intended for storing sensitive personal, financial, or legal information in its current form.
+
+Illustrative readiness indicators do not constitute legal, financial, or estate-planning advice.
