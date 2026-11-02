@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heirloom™ | Personal Affairs Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+
+   <% if (!readOnlyDemo) { %>
+  <script src="/js/assets.js" defer></script>
+<% } %>
+
+</head>
+<body>
+  <div class="workspace">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="#overview" class="wordmark">heirloom.</a>
+        <p>YOUR PERSONAL WORKSPACE</p>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a class="nav-home" href="#overview">Overview</a>
+
+        <details class="nav-section" open>
+          <summary>Estate Planning & Continuity</summary>
+          <a href="#assets">Estate Assets</a>
+          <a href="#documents">Documents</a>
+          <a href="#people">Trusted People</a>
+          <span class="nav-planned">Family Tree <small>Planned</small></span>
+          <span class="nav-planned">Legal Templates <small>Planned</small></span>
+        </details>
+
+        <details class="nav-section" open>
+          <summary>Finances & Ownership</summary>
+          <a href="#financial">Financial Planning</a>
+          <a href="#assets">Assets & Interests</a>
+          <a href="#resilience">Agency & Resilience</a>
+        </details>
+
+        <details class="nav-section" open>
+          <summary>Knowledge & Intelligence</summary>
+          <a href="#knowledge">Knowledge & Legacy</a>
+          <a href="#activity">Activity & Reminders</a>
+          <a href="#priorities">Priority Actions</a>
+        </details>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <span>Help Center <small>Planned</small></span>
+        <span>Upgrade to Pro <small>Planned</small></span>
+        <span>Dark Mode <small>Planned</small></span>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <span>HEIRLOOM / OVERVIEW</span>
+        <span class="demo-label">Demonstration</span>
+      </header>
+
+      <section class="welcome">
+        <p class="eyebrow">BUILD WITH INTENTION</p>
+        <h1>Personal Affairs Dashboard</h1>
+        <p class="greeting">Welcome back, Ada.</p>
+        <p class="date">
+          <%= new Date().toLocaleDateString('en-US', {
+            weekday: 'long',
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric',
+            timeZone: 'America/New_York'
+          }) %>
+        </p>
+        <p class="intro">
+          Organize what you've built. Understand what needs your attention. Strengthen the foundations that support your future and what comes after you.
+        </p>
+      </section>
+
+      <section class="readiness-panel" aria-label="Legacy readiness preview">
+        <div class="readiness-overview">
+          <p class="eyebrow">LEGACY READINESS</p>
+          <div class="readiness-number">64<span>%</span></div>
+          <p>Illustrative progress</p>
+
+          <div class="progress-track"
+               role="progressbar"
+               aria-label="Example legacy readiness"
+               aria-valuenow="64"
+               aria-valuemin="0"
+               aria-valuemax="100">
+            <div class="progress-fill"></div>
+          </div>
+
+          <a href="#priorities" class="text-link">View priority actions →</a>
+        </div>
+
+        <div class="readiness-details">
+          <h2>Build a stronger foundation.</h2>
+          <p>
+            Readiness brings together the records, people, protections, and arrangements that support continuity.
+          </p>
+
+          <div class="metrics">
+            <div>
+              <strong><%= assets.length %></strong>
+              <span>Assets mapped</span>
+            </div>
+
+            <div>
+              <strong>05</strong>
+              <span>Documents tracked</span>
+            </div>
+
+            <div>
+              <strong>04</strong>
+              <span>Trusted people</span>
+            </div>
+
+            <div>
+              <strong>03</strong>
+              <span>Items to review</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="priorities">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR NEXT STEPS</p>
+            <h2>Needs your attention</h2>
+          </div>
+          <span>Example priorities</span>
+        </div>
+
+        <div class="priority-list">
+          <a href="#assets" class="priority-item">
+            <div>
+              <strong>Beneficiary status unknown</strong>
+              <p>Retirement account</p>
+            </div>
+            <span>Review →</span>
+          </a>
+
+          <a href="#people" class="priority-item">
+            <div>
+              <strong>Continuity contact not assigned</strong>
+              <p>Business interest</p>
+            </div>
+            <span>Review →</span>
+          </a>
+
+          <a href="#documents" class="priority-item">
+            <div>
+              <strong>Important document not recorded</strong>
+              <p>Healthcare directive</p>
+            </div>
+            <span>Review →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR WORKSPACE</p>
+            <h2>Quick Access</h2>
+          </div>
+        </div>
+
+        <div class="quick-grid">
+          <a href="#assets" class="quick-card">
+            <span class="card-symbol">01</span>
+            <h3>Estate Assets</h3>
+            <p>Organize what you own, build, and protect.</p>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <a href="#people" class="quick-card">
+            <span class="card-symbol">02</span>
+            <h3>Trusted Network</h3>
+            <p>Understand the people and relationships that matter.</p>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <a href="#documents" class="quick-card">
+            <span class="card-symbol">03</span>
+            <h3>Documents</h3>
+            <p>Keep track of important records and their status.</p>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <a href="#financial" class="quick-card">
+            <span class="card-symbol">04</span>
+            <h3>Financial Planning</h3>
+            <p>Build visibility into financial resources and obligations.</p>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <a href="#knowledge" class="quick-card">
+            <span class="card-symbol">05</span>
+            <h3>Knowledge & Legacy</h3>
+            <p>Make room for ideas, experience, and intellectual capital.</p>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <a href="#resilience" class="quick-card">
+            <span class="card-symbol">06</span>
+            <h3>Agency & Resilience</h3>
+            <p>See where dependencies and continuity risks may exist.</p>
+            <span class="card-arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="detail-grid">
+        <section class="detail-panel" id="assets">
+          <p class="eyebrow">WEALTH & OWNERSHIP</p>
+          <h2>Assets & Interests</h2>
+          <p class="panel-description">
+            Capital takes many forms. Begin by mapping what matters.
+          </p>
+
+          <!-- <div class="record">
+            <div>
+              <strong>Retirement account</strong>
+              <p>Financial capital</p>
+            </div>
+            <span>Needs review</span>
+          </div> -->
+
+          <!-- <div class="record">
+            <div>
+              <strong>Business interest</strong>
+              <p>Business ownership</p>
+            </div>
+            <span>Needs review</span>
+          </div> -->
+
+          <!-- <div class="record">
+            <div>
+              <strong>Creative archive</strong>
+              <p>Intellectual capital</p>
+            </div>
+            <span>Recorded</span>
+          </div> -->
+
+          <% if (!readOnlyDemo) { %>
+
+        <details class="asset-form-panel">
+          <summary>Add Asset</summary>
+
+              <form id="asset-form">
+                <label for="asset-name">Asset name</label>
+                <input type="text" id="asset-name" name="name" required maxlength="150">
+
+            <label for="asset-category">Category</label>
+
+            <select id="asset-category" name="category" required>
+              <option value="">Select a category</option>
+              <option value="financial">Financial</option>
+              <option value="property">Property</option>
+              <option value="business">Business</option>
+              <option value="intellectual-property">Intellectual Property</option>
+              <option value="digital">Digital</option>
+              <option value="creative">Creative</option>
+              <option value="institutional">Institutional</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="asset-continuity">Continuity status</label>
+            <select id="asset-continuity" name="continuityStatus">
+              <option value="not-started">Not started</option>
+              <option value="needs-review">Needs review</option>
+              <option value="in-place">In place</option>
+            </select>
+
+            <button type="submit">Save Asset</button>
+            <button type="button" id="cancel-asset-edit" hidden>Cancel Edit</button>
+            <p id="asset-form-message" role="status"></p>
+          </form>
+        </details>
+
+        <% } %>
+
+
+                    <% if (assets.length > 0) { %>
+            <% assets.forEach(asset => { %>
+              <div class="record">
+                <div>
+                  <strong><%= asset.name %></strong>
+                  <p><%= asset.category.replaceAll('-', ' ') %></p>
+                </div>
+
+                <!-- <div class="asset-actions">
+                  <span><%= asset.continuityStatus.replaceAll('-', ' ') %></span>
+
+                  <button type="button"
+                          class="edit-asset"
+                          data-id="<%= asset._id %>"
+                          data-name="<%= asset.name %>"
+                          data-category="<%= asset.category %>"
+                          data-status="<%= asset.continuityStatus %>">
+                    Edit
+                  </button>
+
+                  <button type="button"
+                          class="delete-asset"
+                          data-id="<%= asset._id %>"
+                          data-name="<%= asset.name %>">
+                    Delete
+                  </button>
+                </div> -->
+
+                            <div class="asset-actions">
+              <span><%= asset.continuityStatus.replaceAll('-', ' ') %></span>
+
+              <% if (!readOnlyDemo) { %>
+                <button type="button"
+                        class="edit-asset"
+                        data-id="<%= asset._id %>"
+                        data-name="<%= asset.name %>"
+                        data-category="<%= asset.category %>"
+                        data-status="<%= asset.continuityStatus %>">
+                  Edit
+                </button>
+
+                <button type="button"
+                        class="delete-asset"
+                        data-id="<%= asset._id %>"
+                        data-name="<%= asset.name %>">
+                  Delete
+                </button>
+              <% } %>
+            </div>
+
+              </div>
+            <% }) %>
+          <% } else { %>
+            <div class="empty-preview">
+              <strong>No assets recorded yet.</strong>
+              <p>Your assets and interests will appear here once added.</p>
+            </div>
+          <% } %>
+
+        </section>
+
+        <section class="detail-panel" id="people">
+          <p class="eyebrow">RELATIONSHIPS & STEWARDSHIP</p>
+          <h2>Trusted Network</h2>
+          <p class="panel-description">
+            The people who support, advise, collaborate, and carry things forward.
+          </p>
+
+          <div class="record">
+            <div>
+              <strong>Amara Adichie</strong>
+              <p>Emergency contact</p>
+            </div>
+          </div>
+
+          <div class="record">
+            <div>
+              <strong>Jordan Lee</strong>
+              <p>Professional advisor</p>
+            </div>
+          </div>
+
+          <p class="panel-note">Your network can extend beyond family relationships.</p>
+        </section>
+
+        <section class="detail-panel" id="documents">
+          <p class="eyebrow">PROTECTION & CONTINUITY</p>
+          <h2>Documents</h2>
+          <p class="panel-description">
+            Track the existence and review the status of important records.
+          </p>
+
+          <div class="record">
+            <div>
+              <strong>Healthcare directive</strong>
+              <p>Not yet recorded</p>
+            </div>
+          </div>
+
+          <div class="record">
+            <div>
+              <strong>Insurance overview</strong>
+              <p>Review needed</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-panel" id="financial">
+          <p class="eyebrow">FINANCIAL VISIBILITY</p>
+          <h2>Financial Overview</h2>
+          <p class="panel-description">
+            Understand the financial resources and obligations that shape your options.
+          </p>
+
+          <div class="empty-preview">
+            <strong>Net worth summary</strong>
+            <p>
+              Asset and liability calculations will appear here once financial records are connected.
+            </p>
+          </div>
+        </section>
+
+        <section class="detail-panel" id="knowledge">
+          <p class="eyebrow">HUMAN & INTELLECTUAL CAPITAL</p>
+          <h2>Knowledge & Legacy</h2>
+          <p class="panel-description">
+            What you know, create, and learn can be as consequential as what you own.
+          </p>
+
+          <div class="record">
+            <div>
+              <strong>Lessons & Experience</strong>
+              <p>Knowledge worth preserving</p>
+            </div>
+          </div>
+
+          <div class="record">
+            <div>
+              <strong>Creative & Intellectual Work</strong>
+              <p>Ideas, contributions, and original work</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-panel" id="resilience">
+          <p class="eyebrow">AGENCY & PROTECTION</p>
+          <h2>Resilience Overview</h2>
+          <p class="panel-description">
+            Building lasting value also means understanding where control and continuity depend on others.
+          </p>
+
+          <div class="record">
+            <div>
+              <strong>Platform dependency</strong>
+              <p>Consider alternative distribution channels</p>
+            </div>
+            <span>Example</span>
+          </div>
+
+          <div class="record">
+            <div>
+              <strong>Continuity planning</strong>
+              <p>Identify important relationships and safeguards</p>
+            </div>
+            <span>Example</span>
+          </div>
+        </section>
+      </div>
+
+      <section class="section activity-section" id="activity">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">STAY INFORMED</p>
+            <h2>Notes & Reminders</h2>
+          </div>
+        </div>
+
+        <div class="activity-grid">
+          <div>
+            <h3>Upcoming Reviews</h3>
+            <p>Confirm the beneficiary status of a retirement account.</p>
+            <p>Review important continuity documents.</p>
+          </div>
+          <div>
+            <h3>Guidance & Notifications</h3>
+            <p>
+              Future updates will surface changes, outstanding information, and suggested next steps.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Heirloom™ is currently a demonstration workspace using fictional data. Readiness figures are illustrative, not legal or financial assessments.
+        </p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
